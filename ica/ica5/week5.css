@@ -1,0 +1,35 @@
+p{
+    font-size: 50px;
+    color:  green;
+}
+
+h1{
+    background-color: purple;
+    background-color: yellow;
+}
+
+h1{
+    background-color: yellow;
+}
+
+div{
+    border: 1px solid black
+}
+
+.box{
+    border: 5px dashed red
+}
+
+#org-box{
+    border: 10px dotted green
+}
+
+.box{
+    border: 100px solid aqua
+}
+
+a:hover{
+    color:green;
+    font-size:100px;
+    text-decoration:none
+}
