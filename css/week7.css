@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+    color: rgb(56, 77, 86);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: rgb(56, 77, 86);
+}
+
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(192, 214, 223);
+}
+
+img{
+    padding-top: 10px;
+    width:40vw;
+    height:40vh;
+    transition: width 1s, height 1s;
+}
+
+img:hover{
+    width:75vw;
+    height:75vh;
+}
+
+#purple-ball{
+    background-color: rgb(72, 48, 75);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 1vw;
+    border-style: solid;
+    border-color:rgb(192, 214, 223);
+    animation-name: purple-ball-move;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+} 
+
+@keyframes purple-ball-move{
+    0% {
+        margin: 0;
+ 
+    }
+
+    50% {
+        margin-left: 96.5%;
+
+    }
+
+    100% {
+        margin: 0;
+
+    }
+}
