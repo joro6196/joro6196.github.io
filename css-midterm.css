@@ -6,7 +6,38 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
   
+  p { 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  h1 {
+    font-style: italic;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  dl {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    list-style-type: none;
+    text-indent: 40px;
+  }
+  
+  .intro { 
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 980px;
+  }
+
+  article {
+    background-color: rgb(101, 155, 94);
+    padding: 50px;
+    border-radius: 15px; 
+  }
+
   .logo {
+    position: sticky;
     font-size: 200%;
     padding: 50px 20px;
     margin: 0 auto;
@@ -19,11 +50,10 @@ body {
     padding: 0 20px;
     max-width: 980px;
     display: flex;
-    column-count:2;
   }
   
   nav {
-    background-color: rgb(191, 174, 214);
+    background-color: rgb(101, 155, 94);
     padding: .5em;
     position: sticky;
     top: 0
@@ -39,30 +69,27 @@ body {
   }
   
   nav a {
-    color: #fff;
+    color: black;
     text-decoration: none;
     padding: .5em 1em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
-  .feature {
-      width: 200px;
-      float: left;
-      margin: 10px;
-  }
-
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 400px) {
     .grid {
-      display:flex;
+      display: flex;
       flex-direction: column;
     }
 
-    .nav ul {
+    .heading {
       flex-direction: column;
-      gap: 20px;
-      text-align:center
+      display: flex;
     }
 
-    .nav{
-      position: static
+    nav ul { 
+      display: 20px;
+      flex-direction: column;
+      text-align: center;
     }
-  }
+}
+
