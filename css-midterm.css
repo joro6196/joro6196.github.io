@@ -18,12 +18,11 @@ body {
     text-align: center;
   }
 
-  dl {
+  ul {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     list-style-type: none;
-    text-indent: 40px;
   }
-  
+
   .intro { 
     margin: 0 auto;
     padding: 0 20px;
