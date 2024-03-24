@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script defer src="../js/raw-text.js"></script>
+
+    <title>Silly Story Generator</title>
+
+    <style>
+      body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: lightgrey;
+        width: 700px;
+      }
+
+      label {
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif
+      }
+
+      div {
+        padding-bottom: 30px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        width: 100px;
+        background-color:lightcyan
+      }
+
+      p {
+        background: lightcyan;
+        color: black;
+        padding: 40px;
+        font-family: 'Lucida Handwriting', cursive;
+        font-size: 30px;
+        visibility: hidden;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <label for="customname">Enter custom name:</label>
+      <input id="customname" type="text" placeholder="" />
+    </div>
+    <div>
+      <label for="us">US</label
+      ><input id="us" type="radio" name="ukus" value="us" checked />
+      <label for="uk">UK</label
+      ><input id="uk" type="radio" name="ukus" value="uk" />
+    </div>
+    <div>
+      <button class="randomize">Generate random story</button>
+    </div>
+    <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
+    <p class="story"></p>
+  </body>
+</html>
