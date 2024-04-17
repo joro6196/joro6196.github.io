@@ -68,14 +68,12 @@ html {
   }
   
   .twitter {
-    /* background-color: #1da1f2; */
-    background-color: #F1A76A;
+    background-color: #1da1f2;
     text-decoration: none;
   }
   
   .twitter:hover {
-    /* background-color: #1e7fbb; */
-    background-color: #F4B886;
+    background-color: #1e7fbb;
   }
   
   .new-quote {
@@ -100,4 +98,23 @@ html {
     .quote-text {
       font-size: 18px;
     }
+  }
+
+
+
+  .tweet {
+    border:1px solid rgb(102, 179, 255);
+    border-radius: 4px;
+    background-color: #1da1f2;;
+    color: white;
+    text-align: center;
+    font-size: 1.8em;
+    width: 60px;
+    height: 35px;
+    line-height: 40px;
+  }
+  
+  .tweet:hover {
+    /* background-color: #1e7fbb; */
+    background-color: #F4B886;
   }
