@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden; /* Ensures no scrollbars */
+
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block; /* Removes margin */
+}
+
+.box {
+    position: absolute;
+    top: 28mm;
+    left: 13mm;
+    padding: 0px 22px; /* Adjust the top and bottom padding */
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    font-size: 24px;
+    text-align: left;
+    font-weight: 400;
+}
+
+
