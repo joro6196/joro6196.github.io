@@ -54,7 +54,7 @@ class VolumeButton {
         this.y = y;
         this.velX = random(5,8);
         this.velY = random(5,8);
-        this.size = 100;
+        this.size = 80;
         this.image = new Image();
         this.image.src = imageSrc;
     }
@@ -130,7 +130,7 @@ function displayVolume() {
 }
 
 function loop() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+    ctx.fillStyle = 'rgba(0, 0, 0, 0)';
     ctx.fillRect(0, 0, width, height);
 
     stars.forEach(star => {
