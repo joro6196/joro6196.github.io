@@ -23,7 +23,7 @@ class Star {
         ctx.drawImage(this.image, this.x - this.size / 2, this.y - this.size / 2, this.size, this.size);
     }
 
-    update() {
+    update() { // checks for the edge of the screen and reversing planets
         if ((this.x + this.size / 2) >= width || (this.x - this.size / 2) <= 0) {
             this.velX = -(this.velX);
         }
@@ -39,7 +39,7 @@ class Star {
 
 const stars = [];
 
-while (stars.length < 25) {
+while (stars.length < 25) { // adds stars into the volume changer for effect.
     const size = random(10, 30);
     const star = new Star(random(0 + size, width - size), random(0 + size, height - size), random(-5, 5), random(-5, 5), size, 'star.png');
     stars.push(star);
@@ -88,28 +88,24 @@ class VolumeButton {
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
                 if (distance < this.size + button.size) {
-                    // Reverse velocities to deflect buttons
-                    const tempVelX = this.velX;
-                    const tempVelY = this.velY;
-                    this.velX = button.velX;
-                    this.velY = button.velY;
-                    button.velX = tempVelX;
-                    button.velY = tempVelY;
+                    // "bounce" effect from previous assignment
+                    this.velX = -(this.velX);
+                    this.velY = -(this.velY);
                 }
             }
         }
     }
 
 }
-
+//the up and down buttons
 const buttons = [
     new VolumeButton('Volume Up', random(30, width - 30), random(30, height - 30), random(-5, 5), random(-5, 5), 'green-planet-up.png'),
     new VolumeButton('Volume Down', random(30, width - 30), random(30, height - 30), random(-5, 5), random(-5, 5), 'red-planet-down.png')
 ];
 
-function handleMouseClick(e) {
+function handleMouseClick(click) {
     buttons.forEach(button => {
-        if (Math.sqrt((e.clientX - button.x) ** 2 + (e.clientY - button.y) ** 2) <= button.size) {
+        if (Math.sqrt((click.clientX - button.x) ** 2 + (click.clientY - button.y) ** 2) <= button.size) {
             if (button.text === 'Volume Up') {
                 volume = Math.min(100, volume + random(1, 50));
             } else if (button.text === 'Volume Down') {
@@ -121,7 +117,7 @@ function handleMouseClick(e) {
 
 canvas.addEventListener('click', handleMouseClick);
 
-function displayVolume() {
+function displayVolume() { // basically doing css/design things in JS for the live volume update
     ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
     ctx.fillRect(50, 50, 319, 50);
     ctx.fillStyle = '#000';
@@ -154,5 +150,3 @@ function loop() {
 }
 
 loop();
-
-
